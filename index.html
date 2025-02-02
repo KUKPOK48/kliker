@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Аниме Кликер</title>
+    <title> Кликер</title>
     <style>
         body {
             font-family: 'Comic Sans MS', cursive, sans-serif;
@@ -106,7 +106,7 @@
 </head>
 <body>
     <h1>Аниме Кликер</h1>
-    <img id="anime-image" src="file:///C:/Users/andre/Desktop/JOTF/%D1%81%D0%B0%D0%B9%D1%82/%D0%BF%D0%B0%D0%BF%D0%B0/%D0%91%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F.jpg" alt="Анимешка">
+    <img id="anime-image" src="https://raw.githubusercontent.com/KUKPOK48/kliker/refs/heads/main/%D0%91%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F.jpg" alt="Анимешка">
     <div id="click-counter">Кликов: 0</div>
     <button class="upgrade" onclick="buyClickUpgrade()">Улучшить клик (Стоимость: 500 кликов)</button>
     <button class="upgrade" onclick="buyAutoClicker()">Купить автокликер (Стоимость: 1000 кликов)</button>
@@ -118,8 +118,8 @@
     </div>
 
     <div id="large-message">
-        Поздравляем! Ты достиг 100% прогресса!
-        <img src="file:///C:/Users/andre/Desktop/JOTF/%D1%81%D0%B0%D0%B9%D1%82/%D0%BF%D0%B0%D0%BF%D0%B0/1625160305ZyQoXgTgEvwvhnr.jpg" alt="Картинка поздравления">
+        Поздравляем! Сдохни уебан ты зря делал на подрочи!
+        <img src="https://raw.githubusercontent.com/KUKPOK48/kliker/refs/heads/main/1625160305ZyQoXgTgEvwvhnr.jpg" alt="Картинка поздравления">
     </div>
 
 
@@ -130,13 +130,32 @@
         let autoClickerInterval;
         let clickUpgradeCost = 500;
         let autoClickerCost = 1000;
-        let specialClickCount = 0;  // Счетчик особых кликов
-        let maxClicks = 100;  // Максимум кликов для 100%
+        let specialClickCount = 0;  
+        let maxClicks = 2000;  
 
         const phrases = [
-            { text: "Ты молодец!", probability: 0.2 },
-            { text: "Продолжай в том же духе!", probability: 0.2 },
-        ];
+    { text: "Ты сын шлюхи!", probability: 0.05 },
+    { text: "Продолжай даун!", probability: 0.05 },
+    { text: "Ты на СВО!", probability: 0.05 },
+    { text: "Сосал? так держать!", probability: 0.05 },
+    { text: "Ты почти пошел нахуй!", probability: 0.05 },
+    { text: "Молодец, иди нахуй!", probability: 0.05 },
+    { text: "Вау, ты не умный!", probability: 0.05 },
+    { text: "Ты делаешь хуйню!", probability: 0.05 },
+    { text: "Все получится,ты еблан!", probability: 0.05 },
+    { text: "Ты!", probability: 0.05 },
+    { text: "сын шлюхи!", probability: 0.05 },
+    { text: "Никогда не будь куколдом!", probability: 0.05 },
+    { text: "Так держать, ты уже на СВО!", probability: 0.05 },
+    { text: "Ты на шаг ближе к яйцам!", probability: 0.05 },
+    { text: "Просто невероятно,сын мияги!", probability: 0.05 },
+    { text: "Ты кончил! Давай еще!", probability: 0.05 },
+    { text: "Не сдавайся,гоп гоп!", probability: 0.05 },
+    { text: "паровозик!", probability: 0.05 },
+    { text: "Ты просто ДАНИИИЛ!", probability: 0.05 },
+    { text: "Твой прогресс идут в жопу!", probability: 0.05 },
+];
+
 
         function updateCounter() {
             document.getElementById('click-counter').innerText = `Кликов: ${clicks}`;
