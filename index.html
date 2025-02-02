@@ -108,8 +108,8 @@
     <h1>Аниме Кликер</h1>
     <img id="anime-image" src="https://raw.githubusercontent.com/KUKPOK48/kliker/refs/heads/main/%D0%91%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F.jpg" alt="Анимешка">
     <div id="click-counter">Кликов: 0</div>
-    <button class="upgrade" onclick="buyClickUpgrade()">Улучшить клик (Стоимость: 500 кликов)</button>
-    <button class="upgrade" onclick="buyAutoClicker()">Купить автокликер (Стоимость: 1000 кликов)</button>
+    <button class="upgrade" onclick="buyClickUpgrade()">Улучшить клик (Стоимость: с каждым разом на 500)</button>
+    <button class="upgrade" onclick="buyAutoClicker()">Купить автокликер (Стоимость: с каждым разом на 1000 кликов)</button>
     <div id="messages"></div>
 
     <div id="progress-bar-container">
@@ -212,7 +212,7 @@
         clickValue += 1;
         clickUpgradeCost += 500;
         updateCounter();
-        updateUpgradeButtons(); // Обновляем кнопки
+        updateUpgradeButtons(); 
         alert(`Улучшение клика куплено! Теперь вы кликаете на ${clickValue} за раз.`);
     } else {
         alert("Недостаточно кликов!");
@@ -225,7 +225,7 @@ function buyAutoClicker() {
         autoClickerLevel += 1;
         autoClickerCost += 1000;
         updateCounter();
-        updateUpgradeButtons(); // Обновляем кнопки
+        updateUpgradeButtons(); 
         alert(`Автокликер куплен! Уровень: ${autoClickerLevel}.`);
         startAutoClicker();
     } else {
