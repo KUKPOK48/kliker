@@ -206,30 +206,33 @@
             }
         }
 
-        function buyClickUpgrade() {
-            if (clicks >= clickUpgradeCost) {
-                clicks -= clickUpgradeCost;
-                clickValue += 1;
-                clickUpgradeCost += 500;
-                updateCounter();
-                alert(`Улучшение клика куплено! Теперь вы кликаете на ${clickValue} за раз.`);
-            } else {
-                alert("Недостаточно кликов!");
-            }
-        }
+       function buyClickUpgrade() {
+    if (clicks >= clickUpgradeCost) {
+        clicks -= clickUpgradeCost;
+        clickValue += 1;
+        clickUpgradeCost += 500;
+        updateCounter();
+        updateUpgradeButtons(); // Обновляем кнопки
+        alert(`Улучшение клика куплено! Теперь вы кликаете на ${clickValue} за раз.`);
+    } else {
+        alert("Недостаточно кликов!");
+    }
+}
 
-        function buyAutoClicker() {
-            if (clicks >= autoClickerCost) {
-                clicks -= autoClickerCost;
-                autoClickerLevel += 1;
-                autoClickerCost += 1000;
-                updateCounter();
-                alert(`Автокликер куплен! Уровень: ${autoClickerLevel}.`);
-                startAutoClicker();
-            } else {
-                alert("Недостаточно кликов!");
-            }
-        }
+function buyAutoClicker() {
+    if (clicks >= autoClickerCost) {
+        clicks -= autoClickerCost;
+        autoClickerLevel += 1;
+        autoClickerCost += 1000;
+        updateCounter();
+        updateUpgradeButtons(); // Обновляем кнопки
+        alert(`Автокликер куплен! Уровень: ${autoClickerLevel}.`);
+        startAutoClicker();
+    } else {
+        alert("Недостаточно кликов!");
+    }
+}
+
 
         function startAutoClicker() {
             if (autoClickerInterval) {
